@@ -53,3 +53,56 @@ Ou seja, S(n) = n(n+1)/2, voltamos pro nosso ponto inicial através de S(n-1).
 ===================================================================
 ===================================================================
 
+Variantes do princípio de indução descrito anteriormente
+
+Chegaram a fazer um passo a passo, uma "estratégia para provar"
+
+1 -> Proponha uma redução dee T(b) para T(a)
+2 -> Como a redução proposta foi para T(a), escreva a hipótese de indução T(a).
+3 -> Prove que o fato: se T(a) é verdadeiro, então T(b) é verdadeiro.
+4 -> Observando a redução proposta, crie uma ou mais bases. Verifique se o teorema é verdadeiro para a(s) base(s).
+
+Tomando isso como base, conseguimos validar o S(n) = S(n-2) + 2n - 1;
+
+Mas tá vendo que tem um S(n-2) ali dentro?
+Puta que pariu vai virar uma recursão!!!!!!!!!!!
+Mas tem solução, chamam isso de indução de dois passos (indução forte e/ou indução de ordem 2).
+
+Pra isso, vamos ter que fazer com duas bases, eu não posso provar T(3) usando T(2)
+E também não posso provar T(4) usando T(3)
+
+Vale lembrar que usando o S(n) ainda estamos falando de somas de naturais.
+
+Vamos garantir duas bases primeiro, uma S(1) e uma S(2)
+
+S(1) = 1(1+1)/2 = 1;
+S(1) = 1;
+S(2) = 2(2+1)/2 = 3;
+
+Nisso, eu posso tentar assumir que a fórmula vale pra N-2, que nem eu fiz com N-1 lá no passado.
+Fazendo a substituição:
+S(n-2) = (n-2)(n-1)/2
+
+Agora, usando aquela redução lá de cima, conseguimos fazer a troca:
+S(n) = S(n-2) + 2n - 1;
+Trocando o S(n-2):
+S(n) = ((n-2)(n-1))/2 + 2n -1
+
+Dá pra t entar dar uma simplificada:
+
+S(n) = (n-2)(n-1)/2 + (4n-2)/2
+
+Juntando tudo que tá lá em cima:
+(n-2)(n-1) = n² - 3n + 2
+
+S(n) = (n² - 3n + 2 + 4n - 2)/2
+
+S(n) = (n²+n)/2
+
+S(n) = n(n+1)/2
+
+Então voltamos até o começo, as duas validações realmente batem entre si.
+Mas dá pra resolver mesmo sem usar recursão
+
+
+
