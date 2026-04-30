@@ -1,1 +1,55 @@
+> Como funciona a verificação exaustiva de um teorema
+
+Vamo considerar que existe um teorema T, que eu quero validar para um número n.
+Esse n é um número inteiro que é menor do que um m e maior do que 1.
+Uma verificação exaustiva seria testar pra 1, 2, 3 até m.
+Mas isso é um saco de fazer manualmente.
+
+Pra isso, nós fazemos uma hipótese de indução e tentamos prever ela.
+Primeiro temos que validar se o primeiro caso é verdadeiro, claro.
+Fazemos a validação de T(1), vamos chamar isso de *base*.
+E tendo como hipótese que, por exemplo, T(n-1) também seria um resultado válido, conseguimos provar que a sequência se mantém, implicando que T(n) é verdadeiro.
+
+Por exemplo, podemos citar esse teorema sobre a soma de todos os números naturais.
+
+Podemos começar a provar que 1 + 2 + 3 + ... + n é notado por n(n+1)/2.
+
+Mas como que a gente prova isso?
+
+Primeiro vamo ter que validar a base, testando pra n = 1.
+Já que dá pra fazer de cabeça, eu sei que a soma de todos os números até 1, é 1.
+
+E pela fórmula, eu sei que 1(1+1)/2 também é 1.
+
+Logo o teorema é verdade pra n = 1.
+
+Nisso eu consigo formular minha hipótese de indução.
+Se o teorema afirma que S(n) = n(n+1)/2
+
+Eu posso admitir por exemplo, trocando n por n - 1, ficaria:
+
+S(n-1) = (n -1) (n - 1 + 1)/2
+Simplificando:
+S(n-1) = (n-1)(n)/2
+E admitimos que isso seja verdade, nunca se sabe.
+
+E, considerando que eu posso sobrepor essas duas sequências, fica:
+
+S(n) = 1 + 2 + 3 + .... + n-1 + n;
+S(n-1) = 1 + 2 + 3 + ..... + n - 1;
+
+Logo, S(n) = S(n-1) + n;
+
+Com isso dá pra gente começar a provar que S(n-1) implica em S(N)
+Vale lembrar que S(n) = S(n-1) + n
+E que S(n-1) = (n-1)n / 2
+Se a gente trocar o S(n-1) pelo valor expandido da linha 44, a gente tem:
+S(n) = ((n-1)n/2) + n
+
+Resolvendo, a gente consegue partir pra S(n) = (n² - n + 2n) / 2 = (n² + n) / 2
+Ou seja, S(n) = n(n+1)/2, voltamos pro nosso ponto inicial através de S(n-1).
+
+===================================================================
+===================================================================
+===================================================================
 
