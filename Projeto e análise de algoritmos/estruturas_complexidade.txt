@@ -50,3 +50,50 @@ insereNoVetorOrdenado(vetor, tamanhoVetor, elemento) {
     posicaoAtualVetor++;
   }
 }
+
+2) Uma pilha é uma estrutura de dados que admite operações de inserção e remoção segundo uma disciplina LIFO (last input, first output), i.e., o último elemento a entrar na estrutura é o primeiro a sair. Explique como se pode implementar daus pilhas em um vetor [1 ... n] de tal modo que nenhuma pilha "transborde" a menos que o número total de elementos nas pilha seja igual a n. As operações de inserção e remoção devem ter complexidade de tempo (pior caso) igual a O(1).
+
+struct PilhaDupla {
+    headCrescente = 0;
+    headDecrescente = 9;
+    pilha[10];
+
+    inserirCrescente(valor) {
+        if (headCrescente+1 == headDecrescente) {
+            return null;
+        }
+
+        pilha[headCrescente] = valor;
+        headCrescente++;
+        return valor;
+    }
+
+    inserirDecrescente(valor) {
+        if (headDecrescente -1 == headCrescente) {
+            return null;
+        }
+
+        pilha[headDecrescente] = valor;
+        headDecrescente--;
+        return valor;
+    }
+
+    buscarCrescente() {
+        if (headCrescente != 0)
+            headCrescente--;
+
+        valor = pilha[headCrescente];
+        pilha[headCrescente] = null;
+        return valor;
+    }
+
+    buscarDecrescente() {
+        if (headDecrescente != 9)
+            headDecrescente++;
+
+        valor = pilha[headDecrescente];
+        pilha[headDecrescente] = null;
+        return valor;
+    }
+}
+
