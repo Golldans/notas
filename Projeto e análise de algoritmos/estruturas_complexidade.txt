@@ -1,1 +1,52 @@
+1) Desenvolva algoritmos para as operações abaixo e calcule a complexidade de tempo (pior caso) para os mesmos. Use um vetor como estrutura de dados.
 
+a) Inserir um elemento em uma data posição de um vetor.
+
+insereNaPosicao(vetor, posicao, elemento) {
+    para i de tamanho até posicao+1 passo -1
+        vetor[i] = vetor[i-1]
+
+    vetor[posicao] = elemento
+}
+
+b) Inserir n elementos em um vetor (por exemplo, lendo um a um a partir de uma entrada padrão).
+
+inserirNElementosANaoSerMenosUm(vetor, tamanhoVetor) {
+  contadorTamanhoVetor = 0;
+
+  while (vetor[contadorTamanhoVetor] != null) {
+    contadorTamanhoVetor++;
+  }
+
+  inputVetor = 0;
+  imprime("Digite o valor que quer inserir no vetor, -1 para sair");
+  leia(inputVetor);
+
+  while(inputVetor != -1 && contadorTamanhoVetor < tamanhoVetor) {
+    vetor[contadorTamanhoVetor] = inputVetor;
+    imprime("Insira o próximo valor");
+    leia(inputVetor);
+    contadorTamanhoVetor++;
+  }
+
+  imprime("Insercao do vetor concluida!")
+}
+
+c) Inserir o elemento X em um vetor ordenado, mantendo a ordenação. Isto é eficiente?
+
+insereNoVetorOrdenado(vetor, tamanhoVetor, elemento) {
+  posicaoAtualVetor = 0;
+
+  while(vetor[posicaoAtualVetor] <= elemento) {
+    posicaoAtualVetor++;
+  }
+
+  valorAuxiliar = elemento;
+
+  while (valorAuxiliar != null) {
+    valorASerTrocado = vetor[posicaoAtualVetor];
+    vetor[posicaoAtualVetor] = valorAuxiliar;
+    valorAuxiliar = valorASerTrocado;
+    posicaoAtualVetor++;
+  }
+}
