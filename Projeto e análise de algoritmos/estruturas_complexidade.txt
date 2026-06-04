@@ -97,3 +97,26 @@ struct PilhaDupla {
     }
 }
 
+3) Mostre como implementar uma fila usando duas pilhas. Analise a complexidade de tempo (pior caso) das operações de inserção e remoção na fila implementada desta forma.
+
+4) Calcule a complexidade de tempo (pior caso) para as seguintes operações realizadas sobre uma lista ligada simples:
+
+a) inserir um elemento na última posição da lista.
+
+b) remover o elemento da primeira posição da lista.
+
+c) remover o elemento de valor igual a x da lista.
+
+
+5) Uma lista ligada circular é uma lista ligada em que os elementos podem ser percorridos circularmente. Desenvolva algoritmos para as operações de inserção, remoção e busca de um elemento em uma lista circular. Quais são as complexidades de tempo (pior caso) desses algoritmos.
+
+6) Escreva um algoritmo para inverter a ordem dos elementos de uma lista ligada simples. Calcule a complexidade de tempo (pior caso) do seu algoritmo.
+
+7) Uma palavra é um palíndromo se a sequência de letras que a forma é a mesma, quer seja lida da esquerda para a direita ou da direita para a equerda (como exemplos: ovo, raiar e osso). Desenvolva uam estrutura de dados baseada em listas e escreva um algoritmo O(n) para resolver o problema de testar se uma palavra é um palíndromo.
+
+
+8) Projete uma estrutura de dados dinâmica (listas) para representar Pilhas. A sua estrutura de dados deve permitir implementar em O(1) os algoritmos para empilhar e desempilhar.
+
+9) Projete uma estrutura de dadods dinâmica (listas) para representar Filas. A sua estrutura de dados deve permitir implementar em O(1) os algoritmos para inserir e retirar da fila.
+
+
